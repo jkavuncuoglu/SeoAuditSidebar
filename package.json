@@ -1,6 +1,6 @@
 {
   "name": "@jkavuncuoglu/seo-ux-audit-sidebar",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "SEO & UX Audit Sidebar components for Vue 3",
   "type": "module",
   "main": "dist/audit-sidebar.umd.js",
@@ -59,6 +59,7 @@
   },
   "homepage": "https://github.com/jkavuncuoglu/SeoAuditSidebar#readme",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }

@@ -4,10 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning as indicated by the version in package.json.
 
-## [0.1.6] - 2025-09-07
+## [0.1.7] - 2025-09-07
 ### Changed
+- Bumped package version to 0.1.7 and updated changelog.
 - Package metadata: renamed package to `@jkavuncuoglu/seo-ux-audit-sidebar` to reflect scope and repository name.
 - Build: refined Vite library build (explicit named exports, ES/UMD outputs, sourcemaps) and declaration generation via `vite-plugin-dts`.
+
+### Fixed
+- CI publish workflow: corrected npm scope configuration to '@jkavuncuoglu' and .npmrc mapping so publish targets the scoped package at https://www.npmjs.com/package/@jkavuncuoglu/seo-ux-audit-sidebar.
+
+## [0.1.6] - 2025-09-07
+### Changed
 - Entry: simplified plugin export and ensured components are auto-registered via `install`.
 
 ### Fixed

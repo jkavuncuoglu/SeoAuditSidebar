@@ -1,8 +1,8 @@
 # SEO & UX Audit Sidebar (Vue 3)
 
-![npm version](https://img.shields.io/npm/v/@jkavuncuoglu/audit-sidebar)
-![npm downloads](https://img.shields.io/npm/dm/@jkavuncuoglu/audit-sidebar)
-![license](https://img.shields.io/npm/l/@jkavuncuoglu/audit-sidebar)
+![npm version](https://img.shields.io/npm/v/@jkavuncuoglu/seo-ux-audit-sidebar)
+![npm downloads](https://img.shields.io/npm/dm/@jkavuncuoglu/seo-ux-audit-sidebar)
+![license](https://img.shields.io/npm/l/@jkavuncuoglu/seo-ux-audit-sidebar)
 ![vue](https://img.shields.io/badge/vue-3.x-brightgreen)
 
 A modular Vue 3 sidebar for quick **Content SEO** and **User Experience (UX)** audits.  
