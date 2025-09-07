@@ -26,7 +26,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build"
   },
   "peerDependencies": {
     "vue": "^3.3.0"
@@ -51,12 +52,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-scope/audit-sidebar.git"
+    "url": "git+https://github.com/jkavuncuoglu/SeoAuditSidebar.git"
   },
   "bugs": {
-    "url": "https://github.com/your-scope/audit-sidebar/issues"
+    "url": "https://github.com/jkavuncuoglu/SeoAuditSidebar/issues"
   },
-  "homepage": "https://github.com/your-scope/audit-sidebar#readme",
+  "homepage": "https://github.com/jkavuncuoglu/SeoAuditSidebar#readme",
   "publishConfig": {
     "access": "public"
   }

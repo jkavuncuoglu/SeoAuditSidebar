@@ -1,52 +1,83 @@
 # SEO & UX Audit Sidebar (Vue 3)
 
-This modular sidebar provides quick Content SEO + User Experience audit checks for any page. It runs safe, client-side heuristics and displays pass/warn/fail statuses with guidance.
+![npm version](https://img.shields.io/npm/v/@jkavuncuoglu/audit-sidebar)
+![npm downloads](https://img.shields.io/npm/dm/@jkavuncuoglu/audit-sidebar)
+![license](https://img.shields.io/npm/l/@jkavuncuoglu/audit-sidebar)
+![vue](https://img.shields.io/badge/vue-3.x-brightgreen)
 
-Files:
-- src/components/audit-sidebar/SidebarAudit.vue — Collapsible sidebar with tabs and run controls.
-- src/components/audit-sidebar/AuditChecklist.vue — List container that renders audit items and exposes a "Run Checks" action.
-- src/components/audit-sidebar/AuditItem.vue — Single item row with status chip, description, and a "Run" button.
-- src/lib/audit/seoAudit.ts — SEO checks (title, description, H1, images alt, canonical, duplicate meta placeholder).
-- src/lib/audit/uxAudit.ts — UX checks (viewport, mobile-friendly heuristic, broken links heuristic, large images, contrast hint).
-- src/styles/audit-sidebar.css — Minimal fallback CSS if Tailwind isn't available.
+A modular Vue 3 sidebar for quick **Content SEO** and **User Experience (UX)** audits.  
+It runs safe, client-side heuristics and shows **pass / warn / fail** statuses with actionable guidance.
 
-Usage in a Laravel + Inertia page (example):
+👉 Perfect for developers who want lightweight, in-browser SEO & UX checks during development.
 
-```vue
-<!-- resources/js/pages/website/Analyze.vue -->
-<script setup lang="ts">
-import { ref, onMounted } from 'vue'
-// Import from /src; Vite includes the repo root `src/` by default.
-import SidebarAudit from '/src/components/audit-sidebar/SidebarAudit.vue'
-// Optional: if Tailwind is disabled, bring minimal styles
-import '/src/styles/audit-sidebar.css'
+---
 
-const auditRef = ref<InstanceType<typeof SidebarAudit> | null>(null)
+## 👀 Preview
 
-onMounted(() => {
-  // Demo: run all checks automatically after mount
-  auditRef.value?.runAll?.()
-})
-</script>
+![SEO & UX Audit Sidebar Preview](https://raw.githubusercontent.com/jkavuncuoglu/audit-sidebar/main/preview.png)  
+*Example of the sidebar auditing SEO & UX issues directly inside your app.*
 
-<template>
-  <div class="min-h-screen">
-    <!-- Your page content here -->
-    <h1 class="text-2xl font-bold">Analyze Loan</h1>
-    <p class="mt-2 text-slate-600">Run quick SEO & UX checks from the sidebar.</p>
+---
 
-    <!-- Mount the audit sidebar -->
-    <SidebarAudit ref="auditRef" />
-  </div>
-</template>
+## 📦 Installation
+
+**NPM**
+```bash
+# NPM
+npm install @jkavuncuoglu/audit-sidebar
+
+#Yarn
+yarn add @jkavuncuoglu/audit-sidebar
+
+#PNPM
+pnpm add @jkavuncuoglu/audit-sidebar
 ```
 
-Notes:
-- The sidebar persists its open/closed state, active tab, and suppressed items in localStorage.
-- "Run all checks" executes both SEO and UX audits; each item has its own "Run" action.
-- Link checking is limited in the browser without cross-origin requests; results are heuristic-only.
-- Duplicate meta is marked as 'unchecked' for single-page context; comparing across pages is out-of-scope here.
+🚀 Basic Usage
+```aiignore
+import { createApp } from 'vue'
+import AuditSidebarPlugin, { SidebarAudit } from '@jkavuncuoglu/audit-sidebar'
+import '@jkavuncuoglu/audit-sidebar/style.css' // optional minimal styles
 
-Troubleshooting:
-- If you use Tailwind, the components will pick up the utility classes.
-- Without Tailwind, import `/src/styles/audit-sidebar.css` globally (e.g., in resources/js/app.ts) or keep the component-scoped imports as-is.
+import App from './App.vue'
+
+const app = createApp(App)
+
+// Install the plugin globally
+app.use(AuditSidebarPlugin)
+
+// Mount your app
+app.mount('#app')
+
+// OR: use <SidebarAudit /> locally inside your components
+
+```
+
+🧩 Features
+- ✅ Content SEO checks: meta title, meta description, H1s, image alts, canonical tag
+- ✅ UX checks: viewport tag, mobile-friendliness heuristic, broken links, large images, contrast hints
+- ✅ One-click auditing: run all checks at once or trigger individually
+- ✅ Local persistence: remembers sidebar state, active tab, and suppressed items via localStorage
+- ✅ Lightweight & client-safe: runs entirely in the browser without external calls
+
+🎨 Styling
+If you use Tailwind, the components will automatically pick up utility classes.
+Without Tailwind, you can import the included fallback CSS:
+
+⚠️ Notes & Limitations
+- 🔍 Link checks are heuristic-only (no cross-origin fetches in browser).
+- 📑 Duplicate meta detection works per-page; cross-page analysis is out of scope.
+- 🌐 Contrast & mobile-friendly checks use basic heuristics; for production audits, pair with Lighthouse or dedicated SEO tools.
+
+🛠️ Troubleshooting
+- Sidebar not styled? Ensure you’ve imported style.css or have Tailwind set up.
+- Vue version mismatch? Requires Vue 3 (Composition API).
+- State not saving? Check if browser storage (localStorage) is enabled.
+
+📄 License
+
+MIT © Jeremy Kavuncuoglu
+
+---
+
+Would you like me to also generate a **preview screenshot (sidebar in action)** section so the README instantly communicates value when people land on it?
