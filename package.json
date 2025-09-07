@@ -1,0 +1,63 @@
+{
+  "name": "@jkavuncuoglu/audit-sidebar",
+  "version": "0.1.3",
+  "description": "SEO & UX Audit Sidebar components for Vue 3",
+  "type": "module",
+  "main": "dist/audit-sidebar.umd.js",
+  "module": "dist/audit-sidebar.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/audit-sidebar.es.js",
+      "require": "./dist/audit-sidebar.umd.js"
+    },
+    "./style.css": {
+      "default": "./styles/audit-sidebar.css"
+    }
+  },
+  "files": [
+    "dist",
+    "styles"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.0",
+    "vue": "^3.3.0"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "component-library",
+    "seo",
+    "ux",
+    "audit",
+    "sidebar"
+  ],
+  "author": "Jeremy Kavuncuoglu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-scope/audit-sidebar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-scope/audit-sidebar/issues"
+  },
+  "homepage": "https://github.com/your-scope/audit-sidebar#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
