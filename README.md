@@ -14,8 +14,7 @@ It runs safe, client-side heuristics and shows **pass / warn / fail** statuses w
 
 ## 👀 Preview
 
-![SEO Audit Sidebar Preview](https://raw.githubusercontent.com/jkavuncuoglu/seo-audit-sidebar/main/preview-seo-audit.png)  
-![UX Audit Sidebar Preview](https://raw.githubusercontent.com/jkavuncuoglu/seo-audit-sidebar/main/preview-ux-audit.png)  
+![SEO & UX Audit Sidebar Preview](https://raw.githubusercontent.com/jkavuncuoglu/seo-audit-sidebar/main/preview.png)  
 *Example of the sidebar auditing SEO & UX issues directly inside your app.*
 
 ---
@@ -80,5 +79,3 @@ Without Tailwind, you can import the included fallback CSS:
 MIT © Jeremy Kavuncuoglu
 
 ---
-
-Would you like me to also generate a **preview screenshot (sidebar in action)** section so the README instantly communicates value when people land on it?
