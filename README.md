@@ -14,7 +14,8 @@ It runs safe, client-side heuristics and shows **pass / warn / fail** statuses w
 
 ## 👀 Preview
 
-![SEO & UX Audit Sidebar Preview](https://raw.githubusercontent.com/jkavuncuoglu/audit-sidebar/main/preview.png)  
+![SEO Audit Sidebar Preview](https://raw.githubusercontent.com/jkavuncuoglu/seo-audit-sidebar/main/preview-ux-seo-audit.png)  
+![UX Audit Sidebar Preview](https://raw.githubusercontent.com/jkavuncuoglu/seo-audit-sidebar/main/preview-ux-audit.png)  
 *Example of the sidebar auditing SEO & UX issues directly inside your app.*
 
 ---
