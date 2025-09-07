@@ -1,2 +1,17 @@
 .npmrc
+.idea/
+.vscode/
+dist/
+build/
+coverage/
+docs/
+lib/
+src/**/*.js.map
+*.log
+*.lock
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+.yarn/cache
 node_modules
