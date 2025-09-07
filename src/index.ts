@@ -7,6 +7,8 @@ import AuditItem from './components/audit-sidebar/AuditItem.vue'
 export * as SeoAudit from './lib/audit/seoAudit'
 export * as UxAudit from './lib/audit/uxAudit'
 
+import '../styles/audit-sidebar.css'
+
 export { SidebarAudit, AuditChecklist, AuditItem }
 
 export default {

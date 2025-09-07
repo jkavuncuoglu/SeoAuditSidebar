@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning as indicated by the version in package.json.
 
+## [0.1.6] - 2025-09-07
+### Changed
+- Package metadata: renamed package to `@jkavuncuoglu/seo-ux-audit-sidebar` to reflect scope and repository name.
+- Build: refined Vite library build (explicit named exports, ES/UMD outputs, sourcemaps) and declaration generation via `vite-plugin-dts`.
+- Entry: simplified plugin export and ensured components are auto-registered via `install`.
+
+### Fixed
+- Type declarations path and export map to align with bundling outputs.
+
+## [0.1.5] - 2025-09-06
+### Added
+- Export map entry for `style.css` to allow consumers to `import '@jkavuncuoglu/seo-ux-audit-sidebar/style.css'`.
+
+### Changed
+- Package files whitelist to publish only `dist` and `styles`.
+- Prepublish script tightened to run `typecheck` and `build` before publish.
+
 ## [0.1.4] - 2025-09-07
 ### Security
 - Addressed dependency vulnerabilities by updating indirect dependencies via fresh lockfile generation and using npm ci.

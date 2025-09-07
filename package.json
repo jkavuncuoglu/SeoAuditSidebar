@@ -1,6 +1,6 @@
 {
-  "name": "seo-ux-audit-sidebar",
-  "version": "0.1.3",
+  "name": "@jkavuncuoglu/seo-ux-audit-sidebar",
+  "version": "0.1.6",
   "description": "SEO & UX Audit Sidebar components for Vue 3",
   "type": "module",
   "main": "dist/audit-sidebar.umd.js",
