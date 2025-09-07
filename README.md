@@ -78,4 +78,7 @@ Without Tailwind, you can import the included fallback CSS:
 
 MIT © Jeremy Kavuncuoglu
 
+## Release Notes
+See the full changelog in [CHANGELOG.md](./CHANGELOG.md).
+
 ---
